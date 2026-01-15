@@ -1,0 +1,337 @@
+---
+const weeks = [
+  {
+    number: "01",
+    title: "Comprender el Duelo",
+    items: [
+      "Qué es el duelo y por qué duele tanto",
+      "La sensación de vacío y de pérdida",
+      "Dejar de exigirte estar bien antes de tiempo",
+      "Permitirte vivir las emociones sin forzar nada",
+    ],
+  },
+  {
+    number: "02",
+    title: "Las Etapas del Alma",
+    items: [
+      "Negación, rabia, culpa y tristeza profunda",
+      "Cómo se ve esto en la vida real",
+      "Identificar en qué etapa estás hoy",
+      "Herramientas para cada momento",
+    ],
+  },
+  {
+    number: "03",
+    title: "Apego y Soltar",
+    items: [
+      "Por qué duele tanto dejar ir",
+      "El miedo a olvidar o a seguir viviendo",
+      "La lealtad invisible que continúa ahí",
+      "Honrar el vínculo desde el amor",
+    ],
+  },
+  {
+    number: "04",
+    title: "Culpa y Pendientes",
+    items: [
+      "Lo que no se dijo y no se hizo",
+      "Cómo cerrar sin respuestas perfectas",
+      "Liberar la carga emocional",
+      "El perdón como acto de alivio",
+    ],
+  },
+  {
+    number: "05",
+    title: "El Cuerpo en Duelo",
+    items: [
+      "Ansiedad, insomnio y desregulación",
+      "Cómo el duelo habla en el cuerpo",
+      "Técnicas de regulación nerviosa",
+      "Volver a habitar tu propia piel",
+    ],
+  },
+  {
+    number: "06",
+    title: "Reconstruir el Sentido",
+    items: [
+      "Quién eres tú ahora, después de esto",
+      "Recuperar pequeños momentos de paz",
+      "Integrar la pérdida sin perderte a ti",
+      "Los primeros pasos hacia la luz",
+    ],
+  },
+];
+---
+
+<section class='program' id='programa'>
+  <div class='program-bg'></div>
+
+  <div class='container'>
+    <div class='program-header fade-in'>
+      <span class='section-subtitle'>Tu Camino de Sanación</span>
+      <h2 class='section-title'>El Programa Paso a Paso</h2>
+      <div class='divider-center'>✦</div>
+      <p class='section-desc'>
+        6 semanas diseñadas con amor y ciencia para sostenerte mientras
+        reconstruyes tu mundo interior.
+      </p>
+    </div>
+
+    <div class='timeline'>
+      <div class='timeline-line'></div>
+
+      {
+        weeks.map((week, index) => (
+          <div
+            class='week-item fade-in-up'
+            style={`animation-delay: ${index * 0.1}s`}
+          >
+            <div class='week-marker'>
+              <div class='marker-circle' />
+            </div>
+
+            <div class='week-content-card'>
+              <div class='week-number-display'>{week.number}</div>
+              <h3 class='week-title'>{week.title}</h3>
+              <ul class='week-list'>
+                {week.items.map((item) => (
+                  <li>
+                    <span class='bullet'>›</span> {item}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+        ))
+      }
+    </div>
+
+    <div class='program-footer fade-in'>
+      <div class='ornament-divider'>
+        <span>∞</span>
+      </div>
+      <p>
+        No tienes que hacerlo solo/a. Este mapa está trazado para guiarte cuando
+        no puedes ver el camino.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .program {
+    position: relative;
+    padding: var(--section-padding) 0;
+    background-color: #fff;
+    overflow: hidden;
+  }
+
+  .program-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    pointer-events: none;
+  }
+
+  .program-header {
+    text-align: center;
+    margin-bottom: 5rem;
+  }
+
+  .divider-center {
+    font-size: 1.5rem;
+    color: var(--gold);
+    text-align: center;
+    margin: 1rem 0 2rem;
+  }
+
+  .section-desc {
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--gray-text);
+    line-height: 1.6;
+  }
+
+  /* Timeline */
+  .timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  .timeline-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      transparent 0%,
+      var(--gold-light) 15%,
+      var(--gold-light) 85%,
+      transparent 100%
+    );
+    transform: translateX(-50%);
+  }
+
+  .week-item {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 4rem;
+  }
+
+  .week-marker {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    background: #fff;
+    padding: 0.5rem 0;
+  }
+
+  .marker-circle {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--gold);
+    border-radius: 50%;
+    position: relative;
+    background: #fff;
+  }
+
+  .marker-circle::after {
+    content: "";
+    position: absolute;
+    inset: 3px;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+
+  .week-content-card {
+    background: #fff;
+    padding: 2.5rem;
+    width: 45%;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    position: relative;
+    transition: all 0.5s ease;
+  }
+
+  .week-item:nth-child(odd) .week-content-card {
+    margin-right: auto; /* Push to left */
+    text-align: right;
+  }
+
+  .week-item:nth-child(even) .week-content-card {
+    margin-left: auto; /* Push to right */
+    text-align: left;
+  }
+
+  /* Hover effect for cleaner look */
+  .week-content-card:hover {
+    border-color: var(--gold-light);
+    box-shadow: 0 10px 40px rgba(212, 175, 55, 0.08);
+  }
+
+  .week-number-display {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    color: var(--gold-light);
+    opacity: 0.3;
+    line-height: 1;
+    position: absolute;
+    top: 1rem;
+    font-weight: 300;
+  }
+
+  .week-item:nth-child(odd) .week-number-display {
+    right: 1.5rem;
+  }
+
+  .week-item:nth-child(even) .week-number-display {
+    left: 1.5rem;
+  }
+
+  .week-title {
+    font-family: var(--font-serif);
+    font-size: 1.6rem;
+    color: var(--gold-dark);
+    margin: 1.5rem 0 1rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .week-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    color: var(--gray-text);
+    font-size: 0.95rem;
+  }
+
+  .week-list li {
+    margin-bottom: 0.5rem;
+    position: relative;
+  }
+
+  .bullet {
+    color: var(--gold);
+    font-size: 1.2rem;
+    line-height: 1;
+    vertical-align: middle;
+  }
+
+  /* Program Footer */
+  .program-footer {
+    text-align: center;
+    margin-top: 3rem;
+  }
+
+  .ornament-divider {
+    font-size: 2rem;
+    color: var(--gold-light);
+    margin-bottom: 1rem;
+  }
+
+  .program-footer p {
+    font-family: var(--font-serif);
+    font-style: italic;
+    font-size: 1.2rem;
+    color: var(--gray-medium);
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .timeline-line {
+      left: 20px;
+      transform: none;
+    }
+
+    .week-item {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 3rem;
+    }
+
+    .week-marker {
+      left: 12px;
+      transform: none;
+    }
+
+    .week-content-card {
+      width: calc(100% - 60px);
+      margin-left: 60px !important;
+      text-align: left !important;
+      padding: 1.5rem;
+    }
+
+    .week-number-display {
+      right: 1.5rem !important;
+      left: auto !important;
+    }
+  }
+</style>

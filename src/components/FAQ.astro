@@ -1,0 +1,194 @@
+---
+const faqs = [
+  {
+    question:
+      "¿Este programa es solo para personas que han perdido a alguien por fallecimiento?",
+    answer:
+      "No. Está diseñado para cualquier duelo afectivo profundo: rupturas amorosas, divorcios, pérdidas prolongadas o fallecimiento. Lo que define el duelo es el impacto emocional, no solo el tipo de pérdida.",
+  },
+  {
+    question: "¿Cuánto dura el programa?",
+    answer:
+      "El programa tiene una duración de 8 semanas, con un acompañamiento estructurado y progresivo para asegurar que integres cada herramienta con calma.",
+  },
+  {
+    question: "¿El dolor se va a ir por completo?",
+    answer:
+      "El objetivo no es borrar el dolor, sino que deje de controlar tu vida. Aprendes a sostenerlo, entender su mensaje y relacionarte con él desde el amor y no desde el sufrimiento.",
+  },
+  {
+    question: "¿Este programa reemplaza la terapia psicológica?",
+    answer:
+      "Es un acompañamiento complementario. Si eliges la opción Integral, tendrás sesiones de psicología clínica. La opción Holística es un acompañamiento espiritual y tanatológico que complementa muy bien procesos terapéuticos.",
+  },
+  {
+    question: "¿Tengo que creer en lo espiritual para participar?",
+    answer:
+      "No. No se impone ninguna creencia. La dimensión espiritual se aborda como la conexión contigo mismo/a y con el sentido de la vida, respetando profundamente tu visión del mundo.",
+  },
+  {
+    question: "¿Qué pasa si me siento peor al inicio del proceso?",
+    answer:
+      "Es normal y esperado. Al destapar heridas para limpiarlas, pueden doler un poco más al principio. Esto no es retroceso, es parte de la curación real.",
+  },
+  {
+    question: "¿Puedo participar si mi duelo ocurrió hace mucho tiempo?",
+    answer:
+      "Sí. El tiempo cronológico no sana por sí solo; lo que sana es lo que hacemos con ese tiempo. Nunca es tarde para elaborar un duelo pendiente.",
+  },
+  {
+    question: "¿Recibiré mensajes de mis seres queridos fallecidos?",
+    answer:
+      "En las últimas sesiones, cuando hay mayor apertura, es común que ocurran conexiones sutiles o se reciban mensajes que traen paz. Sin embargo, esto no se fuerza ni se garantiza como un espectáculo; ocurre de manera natural si es lo que tu proceso necesita.",
+  },
+  {
+    question: "¿Qué necesito para participar?",
+    answer:
+      "Solo necesitas disposición para mirar tu dolor con valentía y un espacio tranquilo para las sesiones. No necesitas 'estar bien' para empezar; al contrario, ven tal como estás.",
+  },
+];
+---
+
+<section class='faq' id='preguntas'>
+  <div class='faq-bg'></div>
+
+  <div class='container container-small'>
+    <div class='faq-header fade-in'>
+      <span class='section-subtitle'>Claridad para ti</span>
+      <h2 class='section-title'>Preguntas Frecuentes</h2>
+      <div class='divider-center'>✦</div>
+    </div>
+
+    <div class='faq-list'>
+      {
+        faqs.map((item, index) => (
+          <details
+            class='faq-item fade-in-up'
+            style={`animation-delay: ${index * 0.05}s`}
+          >
+            <summary class='faq-question'>
+              <span class='question-text'>{item.question}</span>
+              <span class='icon-plus'>+</span>
+            </summary>
+            <div class='faq-answer'>
+              <p>{item.answer}</p>
+            </div>
+          </details>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .faq {
+    position: relative;
+    padding: var(--section-padding) 0;
+    min-height: 50vh;
+    background-color: var(--white-cream);
+  }
+
+  .faq-bg {
+    position: absolute;
+    inset: 0;
+    opacity: 0.4;
+    background-image: radial-gradient(#d4af37 0.5px, transparent 0.5px);
+    background-size: 20px 20px;
+  }
+
+  .container-small {
+    max-width: 800px;
+    z-index: 1;
+    position: relative;
+  }
+
+  .faq-header {
+    text-align: center;
+    margin-bottom: 4rem;
+  }
+
+  .divider-center {
+    font-size: 1.5rem;
+    color: var(--gold);
+    text-align: center;
+    margin: 1rem 0 2rem;
+  }
+
+  .faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .faq-item {
+    background: #fff;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    border-radius: 4px;
+    transition: all 0.3s ease;
+  }
+
+  .faq-item:hover {
+    box-shadow: 0 4px 15px rgba(212, 175, 55, 0.05);
+    border-color: var(--gold-light);
+  }
+
+  .faq-item[open] {
+    border-color: var(--gold);
+    box-shadow: 0 4px 20px rgba(212, 175, 55, 0.1);
+  }
+
+  .faq-question {
+    padding: 1.5rem;
+    font-family: var(--font-serif);
+    font-size: 1.2rem;
+    color: var(--gold-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none; /* Hide default triangle */
+  }
+
+  /* Remove default triangle in some browsers */
+  .faq-question::-webkit-details-marker {
+    display: none;
+  }
+
+  .icon-plus {
+    font-family: var(--font-sans);
+    font-size: 1.5rem;
+    color: var(--gold);
+    font-weight: 300;
+    transition: transform 0.3s ease;
+  }
+
+  .faq-item[open] .icon-plus {
+    transform: rotate(45deg);
+    color: var(--gold-dark);
+  }
+
+  .faq-answer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: var(--gray-text);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    animation: slideDown 0.3s ease-out;
+  }
+
+  @keyframes slideDown {
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-question {
+      font-size: 1.1rem;
+    }
+  }
+</style>

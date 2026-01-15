@@ -1,0 +1,290 @@
+---
+
+---
+
+<nav class='navbar'>
+  <div class='navbar-container'>
+    <a href='#' class='navbar-logo'>
+      <span class='logo-icon'>✦</span>
+      <span class='logo-text'>Dra. Ruiz</span>
+    </a>
+
+    <div class='navbar-links'>
+      <a href='#problema' class='nav-link'>El Programa</a>
+      <a href='#equipo' class='nav-link'>Equipo</a>
+      <a href='#paquetes' class='nav-link'>Paquetes</a>
+      <a href='#preguntas' class='nav-link'>FAQ</a>
+      <a href='#contacto' class='nav-link nav-cta'>Contactar</a>
+    </div>
+
+    <button class='navbar-toggle' aria-label='Menu'>
+      <span class='toggle-line'></span>
+      <span class='toggle-line'></span>
+      <span class='toggle-line'></span>
+    </button>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div class='mobile-menu'>
+    <div class='mobile-menu-content'>
+      <a href='#problema' class='mobile-link'>El Programa</a>
+      <a href='#equipo' class='mobile-link'>Equipo</a>
+      <a href='#paquetes' class='mobile-link'>Paquetes</a>
+      <a href='#preguntas' class='mobile-link'>FAQ</a>
+      <a href='#contacto' class='mobile-link mobile-cta'>Contactar</a>
+    </div>
+  </div>
+</nav>
+
+<style>
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(212, 175, 55, 0.1);
+    transition: all 0.4s var(--transition-smooth);
+  }
+
+  .navbar.scrolled {
+    background: rgba(255, 255, 255, 0.98);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+  }
+
+  .navbar-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: var(--container-max);
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+
+  /* Logo */
+  .navbar-logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+  }
+
+  .logo-icon {
+    font-size: 1rem;
+    color: var(--gold);
+  }
+
+  .logo-text {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    letter-spacing: 0.1em;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--gray-dark);
+  }
+
+  /* Desktop Links */
+  .navbar-links {
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  .nav-link {
+    font-family: var(--font-sans);
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--gray-text);
+    transition: color 0.3s var(--transition-smooth);
+    position: relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    width: 0;
+    height: 1px;
+    background: var(--gold);
+    transition:
+      width 0.3s var(--transition-smooth),
+      left 0.3s var(--transition-smooth);
+  }
+
+  .nav-link:hover {
+    color: var(--gold-dark);
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+    left: 0;
+  }
+
+  .nav-cta {
+    padding: 0.8rem 1.5rem;
+    border: 1px solid var(--gold);
+    background: transparent;
+    color: var(--gold) !important;
+    transition: all 0.4s var(--transition-smooth);
+  }
+
+  .nav-cta:hover {
+    background: var(--gold);
+    color: var(--white-pure) !important;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.2);
+  }
+
+  /* Mobile Toggle */
+  .navbar-toggle {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0.5rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  .toggle-line {
+    width: 24px;
+    height: 1.5px;
+    background: var(--gray-dark);
+    transition: all 0.3s var(--transition-smooth);
+  }
+
+  .navbar-toggle.active .toggle-line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+
+  .navbar-toggle.active .toggle-line:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.active .toggle-line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+
+  /* Mobile Menu */
+  .mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--white-pure);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s var(--transition-smooth);
+    z-index: 999;
+  }
+
+  .mobile-menu.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .mobile-menu-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+  }
+
+  .mobile-link {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-decoration: none;
+    color: var(--gray-dark);
+    transition: color 0.3s var(--transition-smooth);
+  }
+
+  .mobile-link:hover {
+    color: var(--gold);
+  }
+
+  .mobile-cta {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background: var(--gold);
+    color: var(--white-pure) !important;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .navbar-links {
+      display: none;
+    }
+
+    .navbar-toggle {
+      display: flex;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const navbar = document.querySelector(".navbar");
+    const toggle = document.querySelector(".navbar-toggle");
+    const mobileMenu = document.querySelector(".mobile-menu");
+    const mobileLinks = document.querySelectorAll(".mobile-link");
+
+    // Scroll effect
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar?.classList.add("scrolled");
+      } else {
+        navbar?.classList.remove("scrolled");
+      }
+    });
+
+    // Mobile menu toggle
+    toggle?.addEventListener("click", () => {
+      toggle.classList.toggle("active");
+      mobileMenu?.classList.toggle("active");
+      document.body.style.overflow = mobileMenu?.classList.contains("active")
+        ? "hidden"
+        : "";
+    });
+
+    // Close mobile menu on link click
+    mobileLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        toggle?.classList.remove("active");
+        mobileMenu?.classList.remove("active");
+        document.body.style.overflow = "";
+      });
+    });
+
+    // Smooth scroll for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href") || "");
+        if (target) {
+          const navbarHeight = navbar?.offsetHeight || 0;
+          const targetPosition =
+            target.getBoundingClientRect().top + window.scrollY - navbarHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+  });
+</script>

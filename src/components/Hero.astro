@@ -1,0 +1,335 @@
+---
+
+---
+
+<section class='hero'>
+  <!-- Luxury Background Elements -->
+  <div class="hero-bg-texture"></div>
+  
+  <div class="mandala-container spin-slow">
+    <svg viewBox="0 0 100 100" class="mandala-svg">
+      <circle cx="50" cy="50" r="48" stroke="url(#gold-gradient)" stroke-width="0.2" fill="none" />
+      <circle cx="50" cy="50" r="40" stroke="url(#gold-gradient)" stroke-width="0.1" fill="none" stroke-dasharray="1 2" />
+      <path d="M50 2 A48 48 0 0 1 98 50 A48 48 0 0 1 50 98 A48 48 0 0 1 2 50 A48 48 0 0 1 50 2" stroke="url(#gold-gradient)" stroke-width="0.1" fill="none" opacity="0.5" />
+      <!-- Simplified pattern for elegance -->
+      <defs>
+        <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="#d4af37" />
+          <stop offset="50%" stop-color="#f3e5ab" />
+          <stop offset="100%" stop-color="#b8962e" />
+        </linearGradient>
+      </defs>
+    </svg>
+  </div>
+
+  <div class='hero-content'>
+    <div class="hero-frame fade-in">
+      <div class='hero-badge'>
+        <span class='badge-icon'>✦</span>
+        <span>Programa de Acompañamiento Integral</span>
+        <span class='badge-icon'>✦</span>
+      </div>
+
+      <h1 class='hero-title'>
+        <span class='title-line fade-in-up' style="animation-delay: 0.2s;">Cuando el Dolor</span>
+        <span class='title-line title-accent fade-in-up' style="animation-delay: 0.4s;">No Se Va</span>
+      </h1>
+
+      <div class='divider-elegant fade-in'></div>
+
+      <p class='hero-tagline fade-in' style="animation-delay: 0.6s;">
+        Necesitas aprender a vivir con él,<br />
+        <em>desde el entendimiento y la sabiduría espiritual.</em>
+      </p>
+
+      <div class='hero-cta fade-in' style="animation-delay: 0.8s;">
+        <a href='#programa' class='btn btn-primary'>
+          <span>Iniciar Tu Viaje</span>
+        </a>
+        <a href='#video' class='btn btn-text'>
+          <span class="play-icon">▶</span>
+          <span>Ver Video Introductorio</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="scroll-indicator fade-in">
+    <div class="mouse">
+      <div class="wheel"></div>
+    </div>
+    <span class="scroll-text">Descubre Más</span>
+  </div>
+</section>
+
+<style>
+  .hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, #ffffff 0%, #fdfbf7 100%);
+    overflow: hidden;
+    padding-top: 80px; /* Offset for navbar */
+  }
+
+  .hero-bg-texture {
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23d4af37' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    opacity: 0.5;
+  }
+
+  .mandala-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120vh;
+    height: 120vh;
+    pointer-events: none;
+    opacity: 0.4;
+    z-index: 0;
+  }
+
+  .mandala-svg {
+    width: 100%;
+    height: 100%;
+  }
+
+  .spin-slow {
+    animation: spin 60s linear infinite;
+  }
+
+  @keyframes spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    max-width: 900px;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 4rem;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0; /* Arch shape */
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.1);
+    position: relative;
+  }
+
+  .hero-frame::before {
+    content: "";
+    position: absolute;
+    inset: 5px;
+    border: 1px solid rgba(212, 175, 55, 0.15);
+    border-radius: 50% 50% 0 0 / 30% 30% 0 0;
+    pointer-events: none;
+  }
+
+  .hero-badge {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    font-family: var(--font-sans);
+    font-size: 0.8rem;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    color: var(--gold-dark);
+    margin-bottom: 2rem;
+    opacity: 0.8;
+  }
+
+  .badge-icon {
+    font-size: 1rem;
+    color: var(--gold);
+  }
+
+  .hero-title {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .title-line {
+    font-family: var(--font-serif);
+    font-size: clamp(3rem, 8vw, 6rem);
+    font-weight: 300;
+    line-height: 0.9;
+    color: var(--gray-dark);
+    opacity: 0; /* For animation */
+  }
+
+  .title-accent {
+    font-style: italic;
+    color: var(--gold);
+    background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .divider-elegant {
+    width: 100px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--gold), transparent);
+    margin: 1rem auto 2.5rem;
+    position: relative;
+  }
+
+  .divider-elegant::after {
+    content: "✦";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: var(--white-pure);
+    padding: 0 10px;
+    color: var(--gold);
+    font-size: 12px;
+  }
+
+  .hero-tagline {
+    font-family: var(--font-sans);
+    font-size: 1.1rem;
+    color: var(--gray-text);
+    margin-bottom: 3rem;
+    max-width: 600px;
+    line-height: 1.8;
+  }
+
+  .hero-tagline em {
+    font-family: var(--font-serif);
+    font-size: 1.3rem;
+    color: var(--gold-dark);
+    font-style: italic;
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  .hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+  }
+
+  @media (min-width: 768px) {
+    .hero-cta {
+      flex-direction: row;
+      gap: 2rem;
+    }
+  }
+
+  .btn-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-family: var(--font-sans);
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: var(--gray-text);
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  .btn-text:hover {
+    color: var(--gold);
+  }
+
+  .play-icon {
+    width: 24px;
+    height: 24px;
+    border: 1px solid var(--gold-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 10px;
+    color: var(--gold);
+    transition: all 0.3s;
+  }
+
+  .btn-text:hover .play-icon {
+    background: var(--gold);
+    color: white;
+    border-color: var(--gold);
+  }
+
+  /* Scroll Indicator */
+  .scroll-indicator {
+    position: absolute;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+  }
+
+  .scroll-indicator:hover {
+    opacity: 1;
+  }
+
+  .mouse {
+    width: 26px;
+    height: 40px;
+    border: 1px solid var(--gold);
+    border-radius: 13px;
+    position: relative;
+  }
+
+  .wheel {
+    position: absolute;
+    top: 6px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 1px;
+    animation: scroll 2s infinite;
+  }
+
+  .scroll-text {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--gold-dark);
+  }
+
+  @keyframes scroll {
+    0% { top: 6px; opacity: 1; }
+    100% { top: 20px; opacity: 0; }
+  }
+
+  /* Animation Utilities */
+  .fade-in-up {
+    animation: fadeInUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>

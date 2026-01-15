@@ -1,0 +1,806 @@
+---
+
+---
+
+<div id='angelic-loader' class='loader-container'>
+  <!-- Fondo con partículas de luz -->
+  <div class='particles'>
+    <div class='particle p1'></div>
+    <div class='particle p2'></div>
+    <div class='particle p3'></div>
+    <div class='particle p4'></div>
+    <div class='particle p5'></div>
+    <div class='particle p6'></div>
+    <div class='particle p7'></div>
+    <div class='particle p8'></div>
+  </div>
+
+  <!-- Rayos de luz celestiales -->
+  <div class='light-rays'>
+    <div class='ray r1'></div>
+    <div class='ray r2'></div>
+    <div class='ray r3'></div>
+  </div>
+
+  <div class='loader-content'>
+    <!-- Alas angelicales -->
+    <div class='wings-container'>
+      <div class='wing wing-left'>
+        <svg
+          viewBox='0 0 120 200'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M110 100C110 100 95 60 80 40C65 20 45 5 25 2C15 1 5 5 2 15C0 25 5 45 15 65C25 85 40 100 40 100C40 100 25 85 15 105C5 125 0 150 5 170C10 190 25 198 40 195C55 192 75 175 90 150C105 125 110 100 110 100Z'
+            fill='url(#wingGradientLeft)'
+            stroke='url(#wingStrokeLeft)'
+            stroke-width='0.5'></path>
+          <defs>
+            <linearGradient
+              id='wingGradientLeft'
+              x1='0%'
+              y1='0%'
+              x2='100%'
+              y2='100%'
+            >
+              <stop offset='0%' stop-color='rgba(212, 175, 55, 0.1)'></stop>
+              <stop offset='50%' stop-color='rgba(212, 175, 55, 0.05)'></stop>
+              <stop offset='100%' stop-color='rgba(255, 255, 255, 0.02)'></stop>
+            </linearGradient>
+            <linearGradient
+              id='wingStrokeLeft'
+              x1='0%'
+              y1='0%'
+              x2='100%'
+              y2='100%'
+            >
+              <stop offset='0%' stop-color='rgba(212, 175, 55, 0.6)'></stop>
+              <stop offset='100%' stop-color='rgba(212, 175, 55, 0.2)'></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+      <div class='wing wing-right'>
+        <svg
+          viewBox='0 0 120 200'
+          fill='none'
+          xmlns='http://www.w3.org/2000/svg'
+        >
+          <path
+            d='M10 100C10 100 25 60 40 40C55 20 75 5 95 2C105 1 115 5 118 15C120 25 115 45 105 65C95 85 80 100 80 100C80 100 95 85 105 105C115 125 120 150 115 170C110 190 95 198 80 195C65 192 45 175 30 150C15 125 10 100 10 100Z'
+            fill='url(#wingGradientRight)'
+            stroke='url(#wingStrokeRight)'
+            stroke-width='0.5'></path>
+          <defs>
+            <linearGradient
+              id='wingGradientRight'
+              x1='100%'
+              y1='0%'
+              x2='0%'
+              y2='100%'
+            >
+              <stop offset='0%' stop-color='rgba(212, 175, 55, 0.1)'></stop>
+              <stop offset='50%' stop-color='rgba(212, 175, 55, 0.05)'></stop>
+              <stop offset='100%' stop-color='rgba(255, 255, 255, 0.02)'></stop>
+            </linearGradient>
+            <linearGradient
+              id='wingStrokeRight'
+              x1='100%'
+              y1='0%'
+              x2='0%'
+              y2='100%'
+            >
+              <stop offset='0%' stop-color='rgba(212, 175, 55, 0.6)'></stop>
+              <stop offset='100%' stop-color='rgba(212, 175, 55, 0.2)'></stop>
+            </linearGradient>
+          </defs>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Elemento central con halo -->
+    <div class='central-element'>
+      <div class='halo halo-outer'></div>
+      <div class='halo halo-middle'></div>
+      <div class='halo halo-inner'></div>
+      <div class='circles-container'>
+        <div class='circle c1'></div>
+        <div class='circle c2'></div>
+        <div class='circle c3'></div>
+        <div class='center-glow'>
+          <div class='inner-star'></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Pluma flotante -->
+    <div class='feather'>
+      <svg viewBox='0 0 40 100' fill='none' xmlns='http://www.w3.org/2000/svg'>
+        <path
+          d='M20 0C20 0 18 20 15 35C12 50 8 65 10 80C12 95 18 100 20 100C22 100 28 95 30 80C32 65 28 50 25 35C22 20 20 0 20 0Z'
+          fill='url(#featherGradient)'
+          stroke='url(#featherStroke)'
+          stroke-width='0.3'></path>
+        <path
+          d='M20 10C20 10 15 30 15 50C15 70 18 90 20 100'
+          stroke='rgba(212, 175, 55, 0.3)'
+          stroke-width='0.5'></path>
+        <defs>
+          <linearGradient
+            id='featherGradient'
+            x1='50%'
+            y1='0%'
+            x2='50%'
+            y2='100%'
+          >
+            <stop offset='0%' stop-color='rgba(255, 255, 255, 0.9)'></stop>
+            <stop offset='50%' stop-color='rgba(212, 175, 55, 0.2)'></stop>
+            <stop offset='100%' stop-color='rgba(212, 175, 55, 0.4)'></stop>
+          </linearGradient>
+          <linearGradient
+            id='featherStroke'
+            x1='50%'
+            y1='0%'
+            x2='50%'
+            y2='100%'
+          >
+            <stop offset='0%' stop-color='rgba(212, 175, 55, 0.5)'></stop>
+            <stop offset='100%' stop-color='rgba(212, 175, 55, 0.8)'></stop>
+          </linearGradient>
+        </defs>
+      </svg>
+    </div>
+
+    <!-- Textos -->
+    <div class='text-container'>
+      <div class='brand-text'>Dra. Ruiz</div>
+      <div class='divider'>
+        <span class='divider-line'></span>
+        <span class='divider-star'>✦</span>
+        <span class='divider-line'></span>
+      </div>
+      <div class='loading-text'>Preparando tu espacio de sanación</div>
+      <div class='quote-text'>
+        "El dolor no siempre desaparece, se transforma"
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  window.addEventListener("load", () => {
+    const loader = document.getElementById("angelic-loader");
+    setTimeout(() => {
+      loader?.classList.add("fade-out");
+      setTimeout(() => {
+        loader?.remove();
+      }, 1200);
+    }, 2500);
+  });
+</script>
+
+<style>
+  .loader-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      #fffef8 0%,
+      #faf8f0 30%,
+      #f5f0e6 70%,
+      #ebe4d6 100%
+    );
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 1;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: hidden;
+  }
+
+  .loader-container::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 200%;
+    height: 100%;
+    background: radial-gradient(
+      ellipse at center,
+      rgba(212, 175, 55, 0.08) 0%,
+      transparent 60%
+    );
+    pointer-events: none;
+  }
+
+  .loader-container.fade-out {
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Partículas de luz flotantes */
+  .particles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    pointer-events: none;
+  }
+
+  .particle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: radial-gradient(
+      circle,
+      rgba(212, 175, 55, 0.8) 0%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    animation: float-particle 8s ease-in-out infinite;
+  }
+
+  .p1 {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+  }
+  .p2 {
+    top: 60%;
+    left: 15%;
+    animation-delay: 1s;
+    width: 3px;
+    height: 3px;
+  }
+  .p3 {
+    top: 30%;
+    left: 85%;
+    animation-delay: 2s;
+  }
+  .p4 {
+    top: 70%;
+    left: 80%;
+    animation-delay: 3s;
+    width: 5px;
+    height: 5px;
+  }
+  .p5 {
+    top: 40%;
+    left: 5%;
+    animation-delay: 4s;
+    width: 2px;
+    height: 2px;
+  }
+  .p6 {
+    top: 80%;
+    left: 90%;
+    animation-delay: 5s;
+  }
+  .p7 {
+    top: 15%;
+    left: 70%;
+    animation-delay: 6s;
+    width: 3px;
+    height: 3px;
+  }
+  .p8 {
+    top: 85%;
+    left: 25%;
+    animation-delay: 7s;
+  }
+
+  @keyframes float-particle {
+    0%,
+    100% {
+      transform: translateY(0) scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      transform: translateY(-30px) scale(1.5);
+      opacity: 0.8;
+    }
+  }
+
+  /* Rayos de luz celestiales */
+  .light-rays {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+  }
+
+  .ray {
+    position: absolute;
+    top: -20%;
+    width: 2px;
+    height: 60%;
+    background: linear-gradient(
+      to bottom,
+      rgba(212, 175, 55, 0.3) 0%,
+      rgba(212, 175, 55, 0.1) 50%,
+      transparent 100%
+    );
+    animation: ray-shimmer 4s ease-in-out infinite;
+  }
+
+  .r1 {
+    left: 30%;
+    animation-delay: 0s;
+    transform: rotate(-15deg);
+  }
+  .r2 {
+    left: 50%;
+    animation-delay: 1.3s;
+  }
+  .r3 {
+    left: 70%;
+    animation-delay: 2.6s;
+    transform: rotate(15deg);
+  }
+
+  @keyframes ray-shimmer {
+    0%,
+    100% {
+      opacity: 0.2;
+    }
+    50% {
+      opacity: 0.5;
+    }
+  }
+
+  .loader-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+  }
+
+  /* Alas angelicales */
+  .wings-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    pointer-events: none;
+  }
+
+  .wing {
+    position: absolute;
+    width: 180px;
+    height: 280px;
+    opacity: 0;
+    animation: wing-appear 2s ease-out forwards;
+  }
+
+  .wing svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 20px rgba(212, 175, 55, 0.3));
+  }
+
+  .wing-left {
+    left: 0;
+    transform: translateX(-20px);
+    animation: wing-left-float 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  .wing-right {
+    right: 0;
+    transform: translateX(20px);
+    animation: wing-right-float 4s ease-in-out infinite;
+    animation-delay: 0.5s;
+  }
+
+  @keyframes wing-appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes wing-left-float {
+    0%,
+    100% {
+      transform: translateX(-20px) rotate(-2deg);
+    }
+    50% {
+      transform: translateX(-25px) rotate(0deg);
+    }
+  }
+
+  @keyframes wing-right-float {
+    0%,
+    100% {
+      transform: translateX(20px) rotate(2deg);
+    }
+    50% {
+      transform: translateX(25px) rotate(0deg);
+    }
+  }
+
+  /* Elemento central */
+  .central-element {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+
+  /* Halos */
+  .halo {
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .halo-outer {
+    width: 200px;
+    height: 200px;
+    animation: halo-rotate 20s linear infinite;
+  }
+
+  .halo-middle {
+    width: 160px;
+    height: 160px;
+    animation: halo-rotate 15s linear infinite reverse;
+  }
+
+  .halo-inner {
+    width: 120px;
+    height: 120px;
+    animation: halo-rotate 10s linear infinite;
+  }
+
+  @keyframes halo-rotate {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  .circles-container {
+    position: relative;
+    width: 100px;
+    height: 100px;
+  }
+
+  .circle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 1px solid rgba(212, 175, 55, 0.6);
+    opacity: 0;
+  }
+
+  .c1 {
+    animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  }
+
+  .c2 {
+    animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite 1s;
+  }
+
+  .c3 {
+    animation: pulse-ring 3s cubic-bezier(0.215, 0.61, 0.355, 1) infinite 2s;
+  }
+
+  .center-glow {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background: radial-gradient(
+      circle,
+      rgba(212, 175, 55, 1) 0%,
+      rgba(212, 175, 55, 0.6) 50%,
+      transparent 70%
+    );
+    border-radius: 50%;
+    box-shadow:
+      0 0 30px rgba(212, 175, 55, 0.6),
+      0 0 60px rgba(212, 175, 55, 0.3),
+      0 0 90px rgba(212, 175, 55, 0.1);
+    animation: breathe 3s ease-in-out infinite;
+  }
+
+  .inner-star {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff;
+    animation: star-pulse 2s ease-in-out infinite;
+  }
+
+  @keyframes star-pulse {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(0.8);
+      opacity: 0.8;
+    }
+  }
+
+  /* Pluma flotante */
+  .feather {
+    position: absolute;
+    width: 30px;
+    height: 75px;
+    top: -40px;
+    right: -60px;
+    opacity: 0;
+    animation:
+      feather-float 6s ease-in-out infinite,
+      feather-appear 1s ease-out 0.5s forwards;
+  }
+
+  .feather svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 2px 4px rgba(212, 175, 55, 0.3));
+  }
+
+  @keyframes feather-appear {
+    from {
+      opacity: 0;
+      transform: translateY(-20px) rotate(-10deg);
+    }
+    to {
+      opacity: 0.8;
+      transform: translateY(0) rotate(0deg);
+    }
+  }
+
+  @keyframes feather-float {
+    0%,
+    100% {
+      transform: translateY(0) rotate(-5deg);
+    }
+    25% {
+      transform: translateY(-10px) rotate(0deg);
+    }
+    50% {
+      transform: translateY(-5px) rotate(5deg);
+    }
+    75% {
+      transform: translateY(-15px) rotate(2deg);
+    }
+  }
+
+  /* Contenedor de textos */
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .brand-text {
+    font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: rgba(139, 115, 55, 1);
+    letter-spacing: 0.15em;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out 0.3s forwards;
+    text-shadow: 0 2px 4px rgba(139, 115, 55, 0.1);
+  }
+
+  .divider {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out 0.5s forwards;
+  }
+
+  .divider-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(212, 175, 55, 0.5) 50%,
+      transparent 100%
+    );
+  }
+
+  .divider-star {
+    color: rgba(212, 175, 55, 0.8);
+    font-size: 0.8rem;
+    animation: star-twinkle 2s ease-in-out infinite;
+  }
+
+  @keyframes star-twinkle {
+    0%,
+    100% {
+      opacity: 0.5;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.2);
+    }
+  }
+
+  .loading-text {
+    font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+    font-size: 0.95rem;
+    letter-spacing: 0.1em;
+    color: rgba(139, 115, 55, 0.9);
+    text-transform: uppercase;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out 0.7s forwards;
+    font-weight: 300;
+  }
+
+  .quote-text {
+    font-family: var(--font-serif), "Playfair Display", Georgia, serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    color: rgba(139, 115, 55, 0.6);
+    letter-spacing: 0.05em;
+    opacity: 0;
+    animation: fade-in-up 1s ease-out 1s forwards;
+    max-width: 300px;
+    text-align: center;
+    line-height: 1.6;
+  }
+
+  @keyframes pulse-ring {
+    0% {
+      transform: scale(0.33);
+      opacity: 0;
+      border-width: 2px;
+    }
+    40% {
+      opacity: 0.6;
+    }
+    80% {
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1.3);
+      opacity: 0;
+      border-width: 0px;
+    }
+  }
+
+  @keyframes breathe {
+    0%,
+    100% {
+      transform: translate(-50%, -50%) scale(1);
+      box-shadow:
+        0 0 30px rgba(212, 175, 55, 0.6),
+        0 0 60px rgba(212, 175, 55, 0.3),
+        0 0 90px rgba(212, 175, 55, 0.1);
+    }
+    50% {
+      transform: translate(-50%, -50%) scale(1.15);
+      box-shadow:
+        0 0 40px rgba(212, 175, 55, 0.8),
+        0 0 80px rgba(212, 175, 55, 0.4),
+        0 0 120px rgba(212, 175, 55, 0.2);
+    }
+  }
+
+  @keyframes fade-in-up {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .wings-container {
+      width: 350px;
+      height: 220px;
+    }
+
+    .wing {
+      width: 130px;
+      height: 200px;
+    }
+
+    .brand-text {
+      font-size: 1.5rem;
+    }
+
+    .loading-text {
+      font-size: 0.8rem;
+    }
+
+    .quote-text {
+      font-size: 0.75rem;
+      max-width: 250px;
+    }
+
+    .feather {
+      right: -40px;
+      top: -30px;
+      width: 25px;
+      height: 60px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .wings-container {
+      width: 280px;
+      height: 180px;
+    }
+
+    .wing {
+      width: 100px;
+      height: 160px;
+    }
+
+    .central-element {
+      width: 100px;
+      height: 100px;
+    }
+
+    .halo-outer {
+      width: 150px;
+      height: 150px;
+    }
+    .halo-middle {
+      width: 120px;
+      height: 120px;
+    }
+    .halo-inner {
+      width: 90px;
+      height: 90px;
+    }
+
+    .circles-container {
+      width: 70px;
+      height: 70px;
+    }
+
+    .center-glow {
+      width: 24px;
+      height: 24px;
+    }
+  }
+</style>

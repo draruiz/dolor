@@ -1,0 +1,314 @@
+---
+const benefits = [
+  {
+    title: "Estabilidad Emocional",
+    description:
+      "Aprende a navegar tus emociones sin que te desborden, encontrando un puerto seguro dentro de ti.",
+    symbol: "⚖️",
+  },
+  {
+    title: "Herramientas de Vida",
+    description:
+      "Recursos prácticos para gestionar el dolor diario, integrando la pérdida en tu nueva realidad.",
+    symbol: "🗝️",
+  },
+  {
+    title: "Acompañamiento Sagrado",
+    description:
+      "Guía profesional y espiritual que honra tu proceso, sin prisas y con profundo respeto.",
+    symbol: "🕊️",
+  },
+  {
+    title: "Comunidad de Almas",
+    description:
+      "Un espacio protegido donde tu vulnerabilidad es bienvenida y tu dolor es comprendido.",
+    symbol: "🛡️",
+  },
+];
+---
+
+<section class='benefits' id='beneficios'>
+  <!-- Background Pattern -->
+  <div class='benefits-bg'>
+    <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
+      <defs>
+        <pattern
+          id='flower-pattern'
+          x='0'
+          y='0'
+          width='60'
+          height='60'
+          patternUnits='userSpaceOnUse'
+        >
+          <circle cx='30' cy='30' r='1.5' fill='#d4af37' opacity='0.1'></circle>
+          <path
+            d='M30 10 Q40 30 30 50 Q20 30 30 10'
+            fill='none'
+            stroke='#d4af37'
+            stroke-width='0.5'
+            opacity='0.05'></path>
+          <path
+            d='M10 30 Q30 40 50 30 Q30 20 10 30'
+            fill='none'
+            stroke='#d4af37'
+            stroke-width='0.5'
+            opacity='0.05'></path>
+        </pattern>
+      </defs>
+      <rect width='100%' height='100%' fill='url(#flower-pattern)'></rect>
+    </svg>
+  </div>
+
+  <div class='container'>
+    <div class='benefits-header fade-in'>
+      <span class='section-subtitle'>Tu Renacer</span>
+      <h2 class='section-title'>Lo Que Te Llevas</h2>
+      <div class='divider-center'>✦</div>
+      <p class='section-desc'>
+        Más que alivio, encontrarás un nuevo significado para continuar tu
+        historia.
+      </p>
+    </div>
+
+    <div class='four-pillars'>
+      <div class='central-circle fade-in'>
+        <div class='circle-content'>
+          <span class='center-icon'>☀︎</span>
+          <span class='center-text'>Tu Paz Interior</span>
+        </div>
+        <div class='circle-rays'></div>
+      </div>
+
+      <div class='benefits-grid'>
+        {
+          benefits.map((benefit, index) => (
+            <div
+              class='benefit-card fade-in-up'
+              style={`animation-delay: ${index * 0.15}s`}
+            >
+              <div class='card-border' />
+              <div class='icon-wrapper'>
+                <span class='benefit-symbol'>{benefit.symbol}</span>
+              </div>
+              <h3 class='benefit-title'>{benefit.title}</h3>
+              <p class='benefit-desc'>{benefit.description}</p>
+            </div>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .benefits {
+    position: relative;
+    padding: var(--section-padding) 0;
+    min-height: 80vh; /* Make it substantial */
+    display: flex; /* Vertically center content if desired, or just block */
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    background: linear-gradient(135deg, #fffcf7 0%, #ffffff 100%);
+  }
+
+  .benefits-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+  }
+
+  .benefits-header {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    margin-bottom: 4rem;
+  }
+
+  .divider-center {
+    font-size: 1.5rem;
+    color: var(--gold);
+    text-align: center;
+    margin: 1rem 0 2rem;
+  }
+
+  .section-desc {
+    max-width: 500px;
+    margin: 0 auto;
+    font-size: 1.1rem;
+    color: var(--gray-text);
+  }
+
+  /* Layout for items */
+  .four-pillars {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    z-index: 2;
+  }
+
+  .benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    position: relative;
+  }
+
+  /* Central Decorative Element */
+  .central-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, #fff, #f9f4e6);
+    box-shadow: 0 0 40px rgba(212, 175, 55, 0.15);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+  }
+
+  .circle-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .center-icon {
+    font-size: 2.5rem;
+    color: var(--gold);
+    line-height: 1;
+    margin-bottom: 0.5rem;
+  }
+
+  .center-text {
+    font-family: var(--font-serif);
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--gold-dark);
+    max-width: 100px;
+  }
+
+  .circle-rays {
+    position: absolute;
+    inset: -20px;
+    border-radius: 50%;
+    border: 1px dashed rgba(212, 175, 55, 0.2);
+    animation: spin-slow 60s linear infinite;
+  }
+
+  /* Benefit Card Base */
+  .benefit-card {
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(10px);
+    padding: 3rem 2rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.4s ease;
+    border: 1px solid transparent;
+  }
+
+  .card-border {
+    position: absolute;
+    inset: 4px;
+    border: 1px solid var(--gold-light);
+    opacity: 0.3;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+  }
+
+  .benefit-card:hover {
+    transform: translateY(-5px);
+    background: #fff;
+    box-shadow: 0 15px 40px rgba(212, 175, 55, 0.05);
+    border-color: rgba(212, 175, 55, 0.1);
+  }
+
+  .benefit-card:hover .card-border {
+    opacity: 0.8;
+  }
+
+  /* Specific Grid Placement to make room for center */
+  .benefits-grid .benefit-card:nth-child(1) {
+    margin-bottom: 2rem;
+    margin-right: 2rem;
+    border-top-left-radius: 80px;
+  }
+
+  .benefits-grid .benefit-card:nth-child(2) {
+    margin-bottom: 2rem;
+    margin-left: 2rem;
+    border-top-right-radius: 80px;
+  }
+
+  .benefits-grid .benefit-card:nth-child(3) {
+    margin-top: 2rem;
+    margin-right: 2rem;
+    border-bottom-left-radius: 80px;
+  }
+
+  .benefits-grid .benefit-card:nth-child(4) {
+    margin-top: 2rem;
+    margin-left: 2rem;
+    border-bottom-right-radius: 80px;
+  }
+
+  .icon-wrapper {
+    margin-bottom: 1.5rem;
+  }
+
+  .benefit-symbol {
+    font-size: 2.5rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.1));
+  }
+
+  .benefit-title {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    color: var(--gold-dark);
+    margin-bottom: 1rem;
+  }
+
+  .benefit-desc {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--gray-text);
+  }
+
+  /* Responsive logic */
+  @media (max-width: 900px) {
+    .four-pillars {
+      padding-top: 0;
+    }
+
+    .central-circle {
+      display: none; /* Hide center circle on mobile for simpler stacking */
+    }
+
+    .benefits-grid {
+      grid-template-columns: 1fr;
+      gap: 1.5rem;
+    }
+
+    .benefit-card {
+      margin: 0 !important;
+      border-radius: 12px !important;
+    }
+  }
+
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+</style>
