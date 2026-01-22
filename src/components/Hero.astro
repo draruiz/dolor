@@ -3,27 +3,48 @@
 ---
 
 <section class='hero'>
+  <!-- Celestial Background Image -->
+  <div class='hero-bg-image'></div>
+
   <!-- Luxury Background Elements -->
-  <div class="hero-bg-texture"></div>
-  
-  <div class="mandala-container spin-slow">
-    <svg viewBox="0 0 100 100" class="mandala-svg">
-      <circle cx="50" cy="50" r="48" stroke="url(#gold-gradient)" stroke-width="0.2" fill="none" />
-      <circle cx="50" cy="50" r="40" stroke="url(#gold-gradient)" stroke-width="0.1" fill="none" stroke-dasharray="1 2" />
-      <path d="M50 2 A48 48 0 0 1 98 50 A48 48 0 0 1 50 98 A48 48 0 0 1 2 50 A48 48 0 0 1 50 2" stroke="url(#gold-gradient)" stroke-width="0.1" fill="none" opacity="0.5" />
+  <div class='hero-bg-texture'></div>
+
+  <div class='mandala-container spin-slow'>
+    <svg viewBox='0 0 100 100' class='mandala-svg'>
+      <circle
+        cx='50'
+        cy='50'
+        r='48'
+        stroke='url(#gold-gradient)'
+        stroke-width='0.2'
+        fill='none'></circle>
+      <circle
+        cx='50'
+        cy='50'
+        r='40'
+        stroke='url(#gold-gradient)'
+        stroke-width='0.1'
+        fill='none'
+        stroke-dasharray='1 2'></circle>
+      <path
+        d='M50 2 A48 48 0 0 1 98 50 A48 48 0 0 1 50 98 A48 48 0 0 1 2 50 A48 48 0 0 1 50 2'
+        stroke='url(#gold-gradient)'
+        stroke-width='0.1'
+        fill='none'
+        opacity='0.5'></path>
       <!-- Simplified pattern for elegance -->
       <defs>
-        <linearGradient id="gold-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-          <stop offset="0%" stop-color="#d4af37" />
-          <stop offset="50%" stop-color="#f3e5ab" />
-          <stop offset="100%" stop-color="#b8962e" />
+        <linearGradient id='gold-gradient' x1='0%' y1='0%' x2='100%' y2='100%'>
+          <stop offset='0%' stop-color='#d4af37'></stop>
+          <stop offset='50%' stop-color='#f3e5ab'></stop>
+          <stop offset='100%' stop-color='#b8962e'></stop>
         </linearGradient>
       </defs>
     </svg>
   </div>
 
   <div class='hero-content'>
-    <div class="hero-frame fade-in">
+    <div class='hero-frame fade-in'>
       <div class='hero-badge'>
         <span class='badge-icon'>✦</span>
         <span>Programa de Acompañamiento Integral</span>
@@ -31,34 +52,39 @@
       </div>
 
       <h1 class='hero-title'>
-        <span class='title-line fade-in-up' style="animation-delay: 0.2s;">Cuando el Dolor</span>
-        <span class='title-line title-accent fade-in-up' style="animation-delay: 0.4s;">No Se Va</span>
+        <span class='title-line fade-in-up' style='animation-delay: 0.2s;'
+          >Cuando el Dolor</span
+        >
+        <span
+          class='title-line title-accent fade-in-up'
+          style='animation-delay: 0.4s;'>No Se Va</span
+        >
       </h1>
 
       <div class='divider-elegant fade-in'></div>
 
-      <p class='hero-tagline fade-in' style="animation-delay: 0.6s;">
+      <p class='hero-tagline fade-in' style='animation-delay: 0.6s;'>
         Necesitas aprender a vivir con él,<br />
         <em>desde el entendimiento y la sabiduría espiritual.</em>
       </p>
 
-      <div class='hero-cta fade-in' style="animation-delay: 0.8s;">
+      <div class='hero-cta fade-in' style='animation-delay: 0.8s;'>
         <a href='#programa' class='btn btn-primary'>
           <span>Iniciar Tu Viaje</span>
         </a>
         <a href='#video' class='btn btn-text'>
-          <span class="play-icon">▶</span>
+          <span class='play-icon'>▶</span>
           <span>Ver Video Introductorio</span>
         </a>
       </div>
     </div>
   </div>
 
-  <div class="scroll-indicator fade-in">
-    <div class="mouse">
-      <div class="wheel"></div>
+  <div class='scroll-indicator fade-in'>
+    <div class='mouse'>
+      <div class='wheel'></div>
     </div>
-    <span class="scroll-text">Descubre Más</span>
+    <span class='scroll-text'>Descubre Más</span>
   </div>
 </section>
 
@@ -72,6 +98,18 @@
     background: radial-gradient(circle at center, #ffffff 0%, #fdfbf7 100%);
     overflow: hidden;
     padding-top: 80px; /* Offset for navbar */
+  }
+
+  .hero-bg-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15;
+    filter: brightness(1.4) saturate(0.3) sepia(0.3) hue-rotate(30deg);
+    mix-blend-mode: soft-light;
+    z-index: 0;
   }
 
   .hero-bg-texture {
@@ -103,8 +141,12 @@
   }
 
   @keyframes spin {
-    from { transform: translate(-50%, -50%) rotate(0deg); }
-    to { transform: translate(-50%, -50%) rotate(360deg); }
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
   }
 
   .hero-content {
@@ -315,8 +357,14 @@
   }
 
   @keyframes scroll {
-    0% { top: 6px; opacity: 1; }
-    100% { top: 20px; opacity: 0; }
+    0% {
+      top: 6px;
+      opacity: 1;
+    }
+    100% {
+      top: 20px;
+      opacity: 0;
+    }
   }
 
   /* Animation Utilities */

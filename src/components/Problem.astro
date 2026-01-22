@@ -32,6 +32,15 @@
       </div>
 
       <div class='problem-image-column fade-in-right'>
+        <!-- Celestial transformation image -->
+        <div class='transformation-image'>
+          <img
+            src='https://images.unsplash.com/photo-1518837695005-2083093ee35b?w=800&q=80'
+            alt='Luz angelical y transformación espiritual'
+            loading='lazy'
+          />
+          <div class='image-overlay'></div>
+        </div>
         <!-- Abstract spiritual shape representing the soul/pain -->
         <div class='soul-shape'>
           <svg viewBox='0 0 200 200' class='soul-svg'>
@@ -74,7 +83,8 @@
           <span class='card-number'>I</span>
           <p>
             Sientes que desde la pérdida, <br /><strong
-              >ya no eres la misma persona.</strong>
+              >ya no eres la misma persona.</strong
+            >
           </p>
         </div>
       </div>
@@ -85,7 +95,8 @@
           <span class='card-number'>II</span>
           <p>
             Te exiges estar bien frente a otros, <br /><strong
-              >pero por dentro te sientes roto/a.</strong>
+              >pero por dentro te sientes roto/a.</strong
+            >
           </p>
         </div>
       </div>
@@ -96,7 +107,8 @@
           <span class='card-number'>III</span>
           <p>
             La culpa te visita frecuentemente <br /><strong
-              >por lo que hiciste o dejaste de hacer.</strong>
+              >por lo que hiciste o dejaste de hacer.</strong
+            >
           </p>
         </div>
       </div>
@@ -107,7 +119,8 @@
           <span class='card-number'>IV</span>
           <p>
             Has intentado seguir adelante, <br /><strong
-              >pero el vacío persiste.</strong>
+              >pero el vacío persiste.</strong
+            >
           </p>
         </div>
       </div>
@@ -204,6 +217,44 @@
   .gold-quote-box strong {
     color: var(--gold-dark);
     font-weight: 500;
+  }
+
+  .problem-image-column {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .transformation-image {
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+    aspect-ratio: 3/4;
+    border-radius: 200px 200px 20px 20px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(212, 175, 55, 0.15);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+  }
+
+  .transformation-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(10%) sepia(8%);
+  }
+
+  .image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(253, 251, 247, 0.1) 0%,
+      rgba(212, 175, 55, 0.1) 100%
+    );
+    pointer-events: none;
   }
 
   /* Soul Shape */

@@ -28,6 +28,9 @@ const benefits = [
 ---
 
 <section class='benefits' id='beneficios'>
+  <!-- Celestial Background Image -->
+  <div class='benefits-bg-image'></div>
+
   <!-- Background Pattern -->
   <div class='benefits-bg'>
     <svg width='100%' height='100%' xmlns='http://www.w3.org/2000/svg'>
@@ -110,6 +113,18 @@ const benefits = [
     justify-content: center;
     overflow: hidden;
     background: linear-gradient(135deg, #fffcf7 0%, #ffffff 100%);
+  }
+
+  .benefits-bg-image {
+    position: absolute;
+    inset: 0;
+    background-image: url("https://images.unsplash.com/photo-1501436513145-30f24e19fcc8?w=1920&q=80");
+    background-size: cover;
+    background-position: center;
+    opacity: 0.12;
+    filter: brightness(1.5) saturate(0.3) sepia(0.35) hue-rotate(35deg);
+    mix-blend-mode: soft-light;
+    z-index: 0;
   }
 
   .benefits-bg {

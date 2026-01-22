@@ -66,6 +66,15 @@ const weeks = [
 <section class='program' id='programa'>
   <div class='program-bg'></div>
 
+  <!-- Celestial decorative element -->
+  <div class='celestial-decoration'>
+    <img
+      src='https://images.unsplash.com/photo-1534447677768-be436bb09401?w=800&q=80'
+      alt=''
+      loading='lazy'
+    />
+  </div>
+
   <div class='container'>
     <div class='program-header fade-in'>
       <span class='section-subtitle'>Tu Camino de Sanación</span>
@@ -124,6 +133,28 @@ const weeks = [
     padding: var(--section-padding) 0;
     background-color: #fff;
     overflow: hidden;
+  }
+
+  .celestial-decoration {
+    position: absolute;
+    right: 5%;
+    top: 15%;
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    overflow: hidden;
+    opacity: 0.1;
+    filter: brightness(1.3) saturate(0.4) sepia(0.25) hue-rotate(25deg)
+      blur(2px);
+    pointer-events: none;
+    z-index: 0;
+    box-shadow: 0 0 100px rgba(212, 175, 55, 0.2);
+  }
+
+  .celestial-decoration img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   .program-bg {
