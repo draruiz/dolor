@@ -89,7 +89,7 @@
 
         <div class='card-header'>
           <h3 class='card-title'>Enfoque Integral</h3>
-          <h4 class='card-guide'>Dra. Ruiz + Willy</h4>
+          <h4 class='card-guide'>Equipo Clínico + Willy</h4>
           <p class='card-desc'>
             La unión profunda de la psicología clínica y la terapia espiritual
             para una sanación total.
@@ -101,9 +101,9 @@
             <span class='price-type'>Por sesión</span>
             <div class='price-tag'>
               <span class='currency'>USD</span>
-              <span class='amount'>85</span>
+              <span class='amount'>65</span>
             </div>
-            <span class='price-local'>COP $290.000 aprox.</span>
+            <span class='price-local'>COP $190.000 aprox.</span>
           </div>
 
           <div class='price-separator'>
@@ -114,16 +114,16 @@
             <span class='price-type'>Paquete 8 Sesiones</span>
             <div class='price-tag'>
               <span class='currency'>USD</span>
-              <span class='amount'>600</span>
+              <span class='amount'>440</span>
             </div>
-            <span class='price-local'>($75 por sesión - Ahorras $80)</span>
-            <span class='price-local-total'>COP $2.280.000 aprox.</span>
+            <span class='price-local'>($55 por sesión - Ahorras $80)</span>
+            <span class='price-local-total'>COP $1.672.000 aprox.</span>
           </div>
 
           <div class='features-list'>
             <ul>
               <li>
-                <span class='gold-bullet'>✦</span> 4 Sesiones Clínicas (Dra. Ruiz)
+                <span class='gold-bullet'>✦</span> 4 Sesiones Clínicas (Equipo Clínico)
               </li>
               <li>
                 <span class='gold-bullet'>✦</span> 4 Sesiones Holísticas (Willy)
@@ -257,14 +257,14 @@
 
   .card-title {
     font-family: var(--font-serif);
-    font-size: 1.8rem;
+    font-size: 2rem;
     color: var(--gold-dark);
     margin: 0 0 0.5rem;
   }
 
   .card-guide {
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--gold);
@@ -272,9 +272,23 @@
   }
 
   .card-desc {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--gray-text);
     line-height: 1.5;
+  }
+
+  @media (max-width: 768px) {
+    .card-title {
+      font-size: 1.8rem;
+    }
+
+    .card-guide {
+      font-size: 0.95rem;
+    }
+
+    .card-desc {
+      font-size: 1.05rem;
+    }
   }
 
   /* Pricing Body */
@@ -289,7 +303,7 @@
 
   .price-type {
     display: block;
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-transform: uppercase;
     color: var(--gray-medium);
     margin-bottom: 0.25rem;
@@ -304,29 +318,48 @@
   }
 
   .currency {
-    font-size: 1rem;
+    font-size: 1.1rem;
     margin-top: 5px;
     margin-right: 2px;
   }
 
   .amount {
     font-family: var(--font-serif);
-    font-size: 2.5rem;
+    font-size: 2.8rem;
     font-weight: 500;
   }
 
   .price-local {
     display: block;
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--gray-medium);
     margin-top: 0.5rem;
   }
 
   .price-local-total {
     display: block;
-    font-size: 0.85rem;
+    font-size: 1rem;
     color: var(--gray-text);
     font-weight: 500;
+  }
+
+  @media (max-width: 768px) {
+    .price-type {
+      font-size: 0.95rem;
+    }
+
+    .currency {
+      font-size: 1.05rem;
+    }
+
+    .amount {
+      font-size: 2.5rem;
+    }
+
+    .price-local,
+    .price-local-total {
+      font-size: 0.95rem;
+    }
   }
 
   .price-separator {
@@ -365,9 +398,15 @@
   .features-list li {
     display: flex;
     align-items: center;
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: var(--gray-text);
     margin-bottom: 0.8rem;
+  }
+
+  @media (max-width: 768px) {
+    .features-list li {
+      font-size: 1.05rem;
+    }
   }
 
   .gold-bullet {
@@ -416,8 +455,14 @@
   .payment-methods {
     text-align: center;
     margin-top: 4rem;
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     color: var(--gray-medium);
+  }
+
+  @media (max-width: 768px) {
+    .payment-methods {
+      font-size: 1rem;
+    }
   }
 
   @media (max-width: 850px) {

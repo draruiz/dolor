@@ -140,7 +140,7 @@ const faqs = [
   .faq-question {
     padding: 1.5rem;
     font-family: var(--font-serif);
-    font-size: 1.2rem;
+    font-size: 1.35rem;
     color: var(--gold-dark);
     cursor: pointer;
     display: flex;
@@ -152,6 +152,12 @@ const faqs = [
   /* Remove default triangle in some browsers */
   .faq-question::-webkit-details-marker {
     display: none;
+  }
+
+  @media (max-width: 768px) {
+    .faq-question {
+      font-size: 1.2rem;
+    }
   }
 
   .icon-plus {
@@ -170,9 +176,15 @@ const faqs = [
   .faq-answer {
     padding: 0 1.5rem 1.5rem 1.5rem;
     color: var(--gray-text);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     animation: slideDown 0.3s ease-out;
+  }
+
+  @media (max-width: 768px) {
+    .faq-answer {
+      font-size: 1.05rem;
+    }
   }
 
   @keyframes slideDown {

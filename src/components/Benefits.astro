@@ -151,8 +151,14 @@ const benefits = [
   .section-desc {
     max-width: 500px;
     margin: 0 auto;
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     color: var(--gray-text);
+  }
+
+  @media (max-width: 768px) {
+    .section-desc {
+      font-size: 1.15rem;
+    }
   }
 
   /* Layout for items */
@@ -204,11 +210,17 @@ const benefits = [
 
   .center-text {
     font-family: var(--font-serif);
-    font-size: 1rem;
+    font-size: 1.1rem;
     text-transform: uppercase;
     letter-spacing: 0.1em;
     color: var(--gold-dark);
     max-width: 100px;
+  }
+
+  @media (max-width: 768px) {
+    .center-text {
+      font-size: 1.05rem;
+    }
   }
 
   .circle-rays {
@@ -286,15 +298,25 @@ const benefits = [
 
   .benefit-title {
     font-family: var(--font-serif);
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     color: var(--gold-dark);
     margin-bottom: 1rem;
   }
 
   .benefit-desc {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: var(--gray-text);
+  }
+
+  @media (max-width: 768px) {
+    .benefit-title {
+      font-size: 1.5rem;
+    }
+
+    .benefit-desc {
+      font-size: 1.05rem;
+    }
   }
 
   /* Responsive logic */

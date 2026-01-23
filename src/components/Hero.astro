@@ -64,8 +64,7 @@
       <div class='divider-elegant fade-in'></div>
 
       <p class='hero-tagline fade-in' style='animation-delay: 0.6s;'>
-        Necesitas aprender a vivir con él,<br />
-        <em>desde el entendimiento y la sabiduría espiritual.</em>
+        Necesitas transformarlo desde el entendimiento y la sabiduría
       </p>
 
       <div class='hero-cta fade-in' style='animation-delay: 0.8s;'>
@@ -187,12 +186,18 @@
     align-items: center;
     gap: 0.8rem;
     font-family: var(--font-sans);
-    font-size: 0.8rem;
+    font-size: 1rem;
     letter-spacing: 0.2rem;
     text-transform: uppercase;
     color: var(--gold-dark);
     margin-bottom: 2rem;
     opacity: 0.8;
+  }
+
+  @media (max-width: 768px) {
+    .hero-badge {
+      font-size: 0.9rem;
+    }
   }
 
   .badge-icon {
@@ -246,7 +251,7 @@
 
   .hero-tagline {
     font-family: var(--font-sans);
-    font-size: 1.1rem;
+    font-size: 1.3rem;
     color: var(--gray-text);
     margin-bottom: 3rem;
     max-width: 600px;
@@ -255,11 +260,21 @@
 
   .hero-tagline em {
     font-family: var(--font-serif);
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     color: var(--gold-dark);
     font-style: italic;
     display: block;
     margin-top: 0.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .hero-tagline {
+      font-size: 1.15rem;
+    }
+
+    .hero-tagline em {
+      font-size: 1.35rem;
+    }
   }
 
   .hero-cta {
@@ -281,11 +296,17 @@
     align-items: center;
     gap: 0.5rem;
     font-family: var(--font-sans);
-    font-size: 0.9rem;
+    font-size: 1.05rem;
     font-weight: 500;
     color: var(--gray-text);
     text-decoration: none;
     transition: color 0.3s;
+  }
+
+  @media (max-width: 768px) {
+    .btn-text {
+      font-size: 1rem;
+    }
   }
 
   .btn-text:hover {
@@ -350,10 +371,16 @@
   }
 
   .scroll-text {
-    font-size: 0.7rem;
+    font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 0.15em;
     color: var(--gold-dark);
+  }
+
+  @media (max-width: 768px) {
+    .scroll-text {
+      font-size: 0.8rem;
+    }
   }
 
   @keyframes scroll {

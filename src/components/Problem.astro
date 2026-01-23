@@ -6,18 +6,13 @@
   <div class='container'>
     <div class='problem-intro fade-in'>
       <h2 class='section-title'>
-        Hay dolores que <span class='text-gold'>no sanan solos</span>
+        Hay dolores que <span class='text-highlight-red'>no sanan solos</span>
       </h2>
       <div class='divider-center'>✦</div>
     </div>
 
     <div class='problem-content'>
       <div class='problem-text-column fade-in-left'>
-        <p class='text-lead'>
-          Hay duelos que no se superan con el simple paso del tiempo. Hay
-          pérdidas que no se acomodan solas. Y hay dolores que, si no se honran
-          y acompañan desde el amor, <em>se quedan a vivir en el alma.</em>
-        </p>
         <p class='text-body'>
           Con el tiempo, este dolor silencioso se transforma en miedos, en
           barreras invisibles que te impiden vincularte con otros de manera
@@ -173,7 +168,7 @@
 
   .text-lead {
     font-family: var(--font-serif);
-    font-size: 1.25rem;
+    font-size: 1.4rem;
     line-height: 1.8;
     color: var(--gray-dark);
     margin-bottom: 1.5rem;
@@ -185,10 +180,20 @@
   }
 
   .text-body {
-    font-size: 1rem;
+    font-size: 1.15rem;
     line-height: 1.7;
     color: var(--gray-text);
     margin-bottom: 2rem;
+  }
+
+  @media (max-width: 768px) {
+    .text-lead {
+      font-size: 1.25rem;
+    }
+
+    .text-body {
+      font-size: 1.1rem;
+    }
   }
 
   .gold-quote-box {
@@ -197,9 +202,15 @@
     background: linear-gradient(135deg, #fffefc 0%, #fffdf8 100%);
     position: relative;
     font-family: var(--font-serif);
-    font-size: 1.1rem;
+    font-size: 1.25rem;
     line-height: 1.8;
     text-align: center;
+  }
+
+  @media (max-width: 768px) {
+    .gold-quote-box {
+      font-size: 1.15rem;
+    }
   }
 
   .gold-quote-box::before {
@@ -281,9 +292,15 @@
     text-align: center;
     font-family: var(--font-serif);
     font-style: italic;
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     color: var(--gold-dark);
     width: 70%;
+  }
+
+  @media (max-width: 768px) {
+    .soul-message {
+      font-size: 1.35rem;
+    }
   }
 
   @keyframes breathe {
@@ -367,9 +384,15 @@
 
   .luxury-card p {
     font-family: var(--font-sans);
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     line-height: 1.6;
     color: var(--gray-text);
+  }
+
+  @media (max-width: 768px) {
+    .luxury-card p {
+      font-size: 1.05rem;
+    }
   }
 
   .luxury-card strong {

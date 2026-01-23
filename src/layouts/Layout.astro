@@ -82,10 +82,17 @@ const {
     padding: 0;
     font-family: var(--font-sans);
     font-weight: 400;
+    font-size: 18px;
     line-height: 1.7;
     color: var(--gray-text);
     background-color: var(--white-pure);
     overflow-x: hidden;
+  }
+
+  @media (max-width: 768px) {
+    body {
+      font-size: 17px;
+    }
   }
 
   h1,
@@ -258,7 +265,7 @@ const {
 
   /* Section Title Styles */
   .section-title {
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
     font-weight: 300;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -266,13 +273,23 @@ const {
 
   .section-subtitle {
     font-family: var(--font-sans);
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--gold);
     text-align: center;
     margin-bottom: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    .section-title {
+      font-size: clamp(2rem, 8vw, 2.5rem);
+    }
+
+    .section-subtitle {
+      font-size: 0.95rem;
+    }
   }
 
   /* Selection */
@@ -301,7 +318,7 @@ const {
 
     // Observe all animated elements
     const animatedElements = document.querySelectorAll(
-      ".fade-in, .fade-in-left, .fade-in-right, .scale-in"
+      ".fade-in, .fade-in-left, .fade-in-right, .scale-in",
     );
     animatedElements.forEach((el) => observer.observe(el));
   });
